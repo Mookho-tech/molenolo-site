@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Molenolo Poultry Farming - Premium quality layer chickens and fresh eggs in Bloemfontein, South Africa">
+  <title>Molenolo Poultry Farming | Fresh Eggs & Layer Chickens | Bloemfontein</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #e67e22;
+      --secondary: #2c3e50;
+      --accent: #f1c40f;
+      --light: #ecf0f1;
+      --dark: #333;
+      --success: #27ae60;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    header .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+      font-weight: 300;
+    }
+
+    .tagline {
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 600px;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.2);
+      padding: 0.8rem;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about, .services, .contact, .mission {
+      margin-bottom: 2.5rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .about:hover, .services:hover, .contact:hover, .mission:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-top: 0;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      list-style-type: none;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+
+    ul li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--success);
+      position: absolute;
+      left: 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .service-card h3 {
+      color: var(--secondary);
+      margin-top: 0;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-icon {
+      background: var(--primary);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background-color: var(--secondary);
+      color: var(--light);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .social-links {
+      margin: 1rem 0;
+    }
+
+    .social-links a {
+      color: white;
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      section {
+        padding: 1.5rem 1rem;
+      }
+      
+      .about, .services, .contact, .mission {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      header p {
+        font-size: 1rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Molenolo Poultry Farming</h1>
+      <p>Bloemfontein, South Africa</p>
+      <div class="tagline">Premium Quality Layer Chickens & Fresh Farm Eggs</div>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Our Farm</h2>
+    <p>
+      Molenolo Poultry Farming is a thriving agricultural enterprise based in Bloemfontein, specializing in high-quality layer chickens and farm-fresh eggs. Established with a passion for poultry excellence, we combine modern farming techniques with sustainable practices to deliver superior products to our valued customers.
+    </p>
+    <p>
+      Our farm operates with strict quality control measures to ensure the health and productivity of our chickens, resulting in consistently fresh, nutritious eggs. We take pride in contributing to food security in our community while maintaining the highest standards of animal welfare.
+    </p>
+  </section>
+
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <p>
+      To be Bloemfontein's most trusted poultry provider by delivering exceptional quality products with reliable service, while maintaining sustainable farming practices that benefit our community and environment.
+    </p>
+  </section>
+
+  <section class="services">
+    <h2>Our Products & Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3><i class="fas fa-egg" style="color: var(--accent); margin-right: 0.5rem;"></i> Fresh Eggs</h3>
+        <p>Daily collected, nutrient-rich eggs from our free-range layer chickens, available in various package sizes.</p>
+      </div>
+      <div class="service-card">
+        <h3><i class="fas fa-kiwi-bird" style="color: var(--accent); margin-right: 0.5rem;"></i> Live Layer Chickens</h3>
+        <p>Healthy, productive chickens carefully raised for optimal egg production and longevity.</p>
+      </div>
+      <div class="service-card">
+        <h3><i class="fas fa-truck" style="color: var(--accent); margin-right: 0.5rem;"></i> Delivery Service</h3>
+        <p>Convenient delivery options throughout Bloemfontein for your poultry needs.</p>
+      </div>
+      <div class="service-card">
+        <h3><i class="fas fa-boxes" style="color: var(--accent); margin-right: 0.5rem;"></i> Bulk Orders</h3>
+        <p>Special wholesale pricing and packages for resellers, restaurants, and institutions.</p>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; font-style: italic;">We serve households, small businesses, resellers, restaurants, and community markets with equal dedication.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div class="contact-method">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div>
+          <h3>Phone</h3>
+          <p>081 234 5678</p>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="contact-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div>
+          <h3>WhatsApp</h3>
+          <p>+27 81 234 5678</p>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p>info@molenolopoultry.co.za</p>
+        </div>
+      </div>
+      <div class="contact-method">
+        <div class="contact-icon">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div>
+          <h3>Facebook</h3>
+          <p><a href="#" target="_blank" style="color: var(--primary); text-decoration: none;">@molenolopoultry</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <h3 style="margin: 0; color: var(--accent);">Molenolo Poultry Farming</h3>
+      <p>Your trusted source for quality poultry products in Bloemfontein</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Molenolo Poultry Farming. All rights reserved.<br>
+        Proudly serving Bloemfontein since 2023
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
